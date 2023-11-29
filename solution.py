@@ -2,13 +2,13 @@ from datetime import datetime, timedelta
 
 
 class Cliente:
-    def __init__(self, nombre, id):
+    def __init__(self, nombre: str, id: int):
         self.nombre = nombre
         self.id = id
 
 
 class Reserva:
-    def __init__(self, cliente, fecha_inicio, fecha_fin):
+    def __init__(self, cliente: Cliente, fecha_inicio: datetime, fecha_fin: datetime):
         self.cliente = cliente
         self.fecha_inicio = fecha_inicio
         self.fecha_fin = fecha_fin
@@ -23,3 +23,5 @@ class FechaNoDisponibleError(Exception):
 class SistemaReservas:
     def __init__(self):
         self.reservas = []
+
+    # Agregar los métodos faltantes
